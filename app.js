@@ -1,11 +1,20 @@
-let q1 = document.querySelectorAll('input[name="q1"]');
-let reponse = "";
-for (i=0; i<=q1.length;i++){
-    if(q1[i].checked){
-        reponse = q1[i].value;
-        break
-    }
+let form = document.querySelector(".form-quizz");
+let reponse = [];
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  reponse = document.querySelectorAll(
+    ".question-block input[type=radio]:checked"
+  ).value;
 
+  console.log(reponse);
+
+  // checkReponse(reponse);
+});
+
+function checkReponse(reponse) {
+  if (reponse === "b") {
+    console.log("you win");
+  } else {
+    console.log("you lose");
+  }
 }
-console.log(q1);
-

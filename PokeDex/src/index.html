@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <div class="my-3 text-center">
+      <form action="">
+        <label for="name">Nom du pokemon :</label>
+        <input class="rounded-xl bg-slate-50 px-2 py-1 shadow-md" type="text" />
+      </form>
+    </div>
+    <div
+      class="card mx-auto min-h-96 max-w-80 rounded-xl border bg-slate-50 shadow-md"
+    >
+      <div class="name border-b-4 border-solid border-black">
+        <h1
+          class="mt-4 text-center text-xl font-light uppercase tracking-widest"
+        >
+          PIKACHU
+        </h1>
+        <img
+          class="relative mx-auto w-12 translate-y-1/2 rounded-full bg-white"
+          src="../assets/pokemon_PNG148.png"
+          alt="Pikachu"
+        />
+      </div>
+      <div id="presentation" class="mt-10 flex flex-col px-2">
+        <div class="general grid grid-cols-2 grid-rows-2 gap-y-2">
+          <p id="size">Taille :</p>
+          <p id="weight">Poids :</p>
+          <p id="type">Type :</p>
+        </div>
+        <div id="particular" class="mt-6">
+          <div id="perf"></div>
+        </div>
+      </div>
+    </div>
+    <select id="pokemonNames">
+      <!-- Les options seront ajoutées dynamiquement par JavaScript -->
+    </select>
+    <script src="app.js"></script>
+  </body>
+</html>
